@@ -56,15 +56,29 @@ canvas_widget.pack(side=ctk.TOP, fill=ctk.BOTH, expand=True)
 #         x_coord = float(entry_x.get())
 #         y_coord = float(entry_y.get())
 
-def makeTable():
-    data = makeTableData.getData()
-    if not data:
-        return
+# def makeTable():
+#     data = makeTableData.getData()
+#     if not data:
+#         return
 
-    table = makeTableData.create_table(left_frame, data)
-    table.pack(expand=True, fill="both", padx=10, pady=10)
+#     table = makeTableData.create_table(left_frame, data)
+#     table.pack(expand=True, fill="both", padx=10, pady=10)
 
-makeTable()
+# makeTable()
+
+data = makeTableData.getData()
+
+table = makeTableData.create_table(left_frame, data)
+btn_buy, btn_sell = makeTableData.addButtons(left_frame, row=1)
+
+table.pack(expand=True, fill="both", padx=10, pady=10)
+
+makeTableData.drawButtons(btn_buy, btn_sell, table, data)
+
+btn_buy.bind("<Enter>", lambda e, row=1: makeTableData.on_button_enter(e, row, data, table))
+btn_sell.bind("<Enter>", lambda e, row=1: makeTableData.on_button_enter(e, row, data, table))
+
+table.bind("<Leave>", lambda e: makeTableData.hideButtons(e, btn_buy, btn_sell, table))
 
 def onMouseMove(event):
     if event.inaxes == ax:
