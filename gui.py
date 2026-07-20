@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import customtkinter as ctk
 import sys
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+import makeTableData
 
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("green")
@@ -15,7 +16,7 @@ root.resizable(False, False)
 
 main_container = ctk.CTkFrame(root, fg_color="transparent")
 main_container.pack(fill="both", expand=True, padx=10, pady=10)
-left_frame = ctk.CTkScrollableFrame(main_container, label_text="P/L Graph", width=450)
+left_frame = ctk.CTkScrollableFrame(main_container, label_text="Options Chain", width=450)
 left_frame.pack(side="left", fill="both", expand=False, padx=(0, 10))
 right_frame = ctk.CTkFrame(main_container, fg_color="transparent", width=700)
 right_frame.pack(side="right", fill="y") 
@@ -27,7 +28,6 @@ ax.set_facecolor('#242424')
 ax.set_xlabel("Index Price", color='white', fontsize=12)
 ax.set_ylabel("Profit / Loss", color='white', fontsize=12)
 
-# UI design
 # ax.spines['top'].set_color("#464646")
 # ax.spines['right'].set_color("#464646")
 ax.spines['top'].set_visible(False)
@@ -55,6 +55,17 @@ canvas_widget.pack(side=ctk.TOP, fill=ctk.BOTH, expand=True)
 #     try:
 #         x_coord = float(entry_x.get())
 #         y_coord = float(entry_y.get())
+
+def makeTable():
+    data = makeTableData.getData()
+    if not data:
+        return
+
+    table = makeTableData.create_table(left_frame, data)
+    table.pack(expand=True, fill="both", padx=10, pady=10)
+
+makeTable()
+
 def onMouseMove(event):
     if event.inaxes == ax:
         x = event.xdata
