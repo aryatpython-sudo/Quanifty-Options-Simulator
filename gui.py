@@ -20,7 +20,7 @@ main_container.pack(fill="both", expand=True, padx=10, pady=10)
 left_frame = ctk.CTkScrollableFrame(main_container, label_text="Options Chain", width=450)
 left_frame.pack(side="left", fill="both", expand=False, padx=(0, 10))
 right_frame = ctk.CTkFrame(main_container, fg_color="transparent", width=700)
-right_frame.pack(side="right", fill="y") 
+right_frame.pack(side="right", fill="y")
 
 fig, ax = plt.subplots(figsize=(10, 6))
 fig.patch.set_facecolor('#242424')
@@ -70,16 +70,18 @@ canvas_widget.pack(side=ctk.TOP, fill=ctk.BOTH, expand=True)
 data = makeTableData.getData()
 
 table = makeTableData.create_table(left_frame, data)
-btn_buy, btn_sell = makeTableData.addButtons(left_frame, row=1)
+btn_buy_call, btn_sell_call, btn_buy_put, btn_sell_put = makeTableData.addButtons(left_frame, row=1)
 
 table.pack(expand=True, fill="both", padx=10, pady=10)
 
-makeTableData.drawButtons(btn_buy, btn_sell, table, data)
+makeTableData.drawButtons(btn_buy_call, btn_sell_call, btn_buy_put, btn_sell_put, table, data)
 
-btn_buy.bind("<Enter>", lambda e, row=1: makeTableData.on_button_enter(e, row, data, table))
-btn_sell.bind("<Enter>", lambda e, row=1: makeTableData.on_button_enter(e, row, data, table))
+btn_buy_call.bind("<Enter>", lambda e, row=1: makeTableData.on_button_enter(e, row, data, table))
+btn_sell_call.bind("<Enter>", lambda e, row=1: makeTableData.on_button_enter(e, row, data, table))
+btn_buy_put.bind("<Enter>", lambda e, row=1: makeTableData.on_button_enter(e, row, data, table))
+btn_sell_put.bind("<Enter>", lambda e, row=1: makeTableData.on_button_enter(e, row, data, table))
 
-table.bind("<Leave>", lambda e: makeTableData.hideButtons(e, btn_buy, btn_sell, table))
+table.bind("<Leave>", lambda e: makeTableData.hideButtons(e, btn_buy_call, btn_sell_call, btn_buy_put, btn_sell_put, table))
 
 def onMouseMove(event):
     if event.inaxes == ax:

@@ -47,44 +47,59 @@ def create_table(master, data):
     return table
 
 def addButtons(master, row):
-    btn_buy = ctk.CTkButton(master, text="B", width=20, height=24, fg_color="#28a745", hover_color="#218838")
-    
-    btn_sell = ctk.CTkButton(master, text="S", width=20, height=24, fg_color="#dc3545", hover_color="#c82333")
+    btn_buy_call = ctk.CTkButton(master, text="B", width=20, height=24, fg_color="#28a745", hover_color="#218838")
+    btn_sell_call = ctk.CTkButton(master, text="S", width=20, height=24, fg_color="#dc3545", hover_color="#c82333")
+    btn_buy_put = ctk.CTkButton(master, text="B", width=20, height=24, fg_color="#28a745", hover_color="#218838")
+    btn_sell_put = ctk.CTkButton(master, text="S", width=20, height=24, fg_color="#dc3545", hover_color="#c82333")
 
-    return btn_buy, btn_sell
+    return btn_buy_call, btn_sell_call, btn_buy_put, btn_sell_put
 
 basket = basketList.basket
 
-def buy_clicked(row, data):
-    basket.append(data[row] + ["BUY"])
+def buy_call_clicked(row, data):
+    basket.append(data[row] + ["BUY", "CALL"])
+    print(f"Added to basket: {data[row]} + ['BUY', 'CALL']")
 
-def sell_clicked(row, data):
-    basket.append(data[row] + ["SELL"])
+def sell_call_clicked(row, data):
+    basket.append(data[row] + ["SELL", "CALL"])
+    print(f"Added to basket: {data[row]} + ['SELL', 'CALL']")
 
-def on_row_enter(e, row, data, btn_buy, btn_sell, table):
+def buy_put_clicked(row, data):
+    basket.append(data[row] + ["BUY", "PUT"])
+    print(f"Added to basket: {data[row]} + ['BUY', 'PUT']")
+
+def sell_put_clicked(row, data):
+    basket.append(data[row] + ["SELL", "PUT"])
+    print(f"Added to basket: {data[row]} + ['SELL', 'PUT']")
+
+def on_row_enter(e, row, data, btn_buy_call, btn_sell_call, btn_buy_put, btn_sell_put, table):
     if getattr(on_row_enter, "last_row", None) == row:
         return
     
-    btn_buy.configure(command=lambda r=row: buy_clicked(r, data))
-    btn_sell.configure(command=lambda r=row: sell_clicked(r, data))
+    btn_buy_call.configure(command=lambda r=row: buy_call_clicked(r, data))
+    btn_sell_call.configure(command=lambda r=row: sell_call_clicked(r, data))
+    btn_buy_put.configure(command=lambda r=row: buy_put_clicked(r, data))
+    btn_sell_put.configure(command=lambda r=row: sell_put_clicked(r, data))
 
-    btn_buy.place(in_=table.frame[row, 1], relx=0.0, rely=0.5, anchor="w")
-    btn_sell.place(in_=table.frame[row, 1], relx=1.0, rely=0.5, anchor="e")
+    btn_buy_call.place(in_=table.frame[row, 1], relx=0.0, rely=0.5, anchor="w")
+    btn_buy_put.place(in_=table.frame[row, 2], relx=0.0, rely=0.5, anchor="e")
+    btn_sell_call.place(in_=table.frame[row, 1], relx=0.0, rely=0.5, anchor="e")
+    btn_sell_put.place(in_=table.frame[row, 1], relx=1.0, rely=0.5, anchor="w")
 
-def drawButtons(btn_buy, btn_sell, table, data):
+def drawButtons(btn_buy_call, btn_sell_call, btn_buy_put, btn_sell_put, table, data):
     for r in range(1, table.rows):
         for c in range(table.columns):
             cell_frame = table.frame[r, c]
 
-            cell_frame.bind("<Enter>", lambda e, row=r: on_row_enter(e, row, data, btn_buy, btn_sell, table))
+            cell_frame.bind("<Enter>", lambda e, row=r: on_row_enter(e, row, data, btn_buy_call, btn_sell_call, btn_buy_put, btn_sell_put, table))
             for widget in cell_frame.winfo_children():
-                widget.bind("<Enter>", lambda e, row=r: on_row_enter(e, row, data, btn_buy, btn_sell, table))
+                widget.bind("<Enter>", lambda e, row=r: on_row_enter(e, row, data, btn_buy_call, btn_sell_call, btn_buy_put, btn_sell_put, table))
 
 def on_button_enter(e, row, data, table):
     if hasattr(on_button_enter, "last_row"):
         on_row_enter(e, on_button_enter.last_row, data, e.widget.master.children['!ctkbutton'], e.widget.master.children['!ctkbutton2'], e.widget.master, table)
 
-def hideButtons(e, btn_buy, btn_sell, table):
+def hideButtons(e, btn_buy_call, btn_sell_call, btn_buy_put, btn_sell_put, table):
     mouse_x, mouse_y = table.winfo_pointerxy()
     
     table_x = table.winfo_rootx()
@@ -96,8 +111,10 @@ def hideButtons(e, btn_buy, btn_sell, table):
     is_outside_y = mouse_y < table_y or mouse_y > (table_y + table_height)
     
     if is_outside_x or is_outside_y:
-        btn_buy.place_forget()
-        btn_sell.place_forget()
-        
+        btn_buy_call.place_forget()
+        btn_sell_call.place_forget()
+        btn_buy_put.place_forget()
+        btn_sell_put.place_forget()
+
         if hasattr(on_row_enter, "last_row"):
             delattr(on_row_enter, "last_row")
