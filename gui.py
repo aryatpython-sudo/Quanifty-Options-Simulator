@@ -4,6 +4,7 @@ import sys
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
 import makeTableData
+import basketList
 
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("green")
@@ -82,6 +83,9 @@ btn_buy_put.bind("<Enter>", lambda e, row=1: makeTableData.on_button_enter(e, ro
 btn_sell_put.bind("<Enter>", lambda e, row=1: makeTableData.on_button_enter(e, row, data, table))
 
 table.bind("<Leave>", lambda e: makeTableData.hideButtons(e, btn_buy_call, btn_sell_call, btn_buy_put, btn_sell_put, table))
+
+btn_save_basket = ctk.CTkButton(right_frame, text="Save Basket", command=basketList.saveBasket)
+btn_save_basket.pack(pady=10, padx=120, anchor="w")
 
 def onMouseMove(event):
     if event.inaxes == ax:
