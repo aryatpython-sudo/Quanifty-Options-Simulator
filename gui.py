@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import customtkinter as ctk
 import sys
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+
 import makeTableData
 
 ctk.set_appearance_mode("dark")

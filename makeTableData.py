@@ -1,6 +1,7 @@
 import customtkinter as ctk
 from CTkTable import *
 import json
+import basketList
 
 def getData():
     try:
@@ -52,11 +53,13 @@ def addButtons(master, row):
 
     return btn_buy, btn_sell
 
+basket = basketList.basket
+
 def buy_clicked(row, data):
-    print(f"Clicked BUY in row {row} with data {data[row]}")
+    basket.append(data[row] + ["BUY"])
 
 def sell_clicked(row, data):
-    print(f"Clicked SELL in row {row} with data {data[row]}")
+    basket.append(data[row] + ["SELL"])
 
 def on_row_enter(e, row, data, btn_buy, btn_sell, table):
     if getattr(on_row_enter, "last_row", None) == row:
