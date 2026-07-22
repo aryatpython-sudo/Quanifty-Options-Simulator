@@ -1,6 +1,8 @@
 import json
 
 basket = []
+with open("saved_basket.json", "r") as f:
+    saved_basket = json.load(f)
 
 def clearBasket():
     global basket

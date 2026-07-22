@@ -35,7 +35,7 @@
         {
             "strike_price": 23400.0,
             "CE": {
-                "ltp": 966.51,
+                "ltp": 10,
                 "iv": 21.29,
                 "greeks": {
                     "delta": 0.9822,

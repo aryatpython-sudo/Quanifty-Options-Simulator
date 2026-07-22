@@ -5,6 +5,7 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
 import makeTableData
 import basketList
+import graphMath
 
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("green")
@@ -37,7 +38,7 @@ ax.spines['right'].set_visible(False)
 ax.spines['bottom'].set_color('gray')
 ax.spines['left'].set_color('gray')
 
-ax.set_xlim(24000, 25000)
+ax.set_xlim(23350, 25350)
 ax.set_ylim(-10000, 10000)
 
 v_line = ax.axvline(x=0, color='gray', linestyle='--', alpha=0.7, visible=False)
@@ -70,8 +71,10 @@ btn_sell_put.bind("<Enter>", lambda e, row=1: makeTableData.on_button_enter(e, r
 
 table.bind("<Leave>", lambda e: makeTableData.hideButtons(e, btn_buy_call, btn_sell_call, btn_buy_put, btn_sell_put, table))
 
-btn_save_basket = ctk.CTkButton(right_frame, text="Save Basket", command=basketList.saveBasket)
-btn_save_basket.pack(pady=10, padx=120, anchor="w")
+# btn_save_basket = ctk.CTkButton(right_frame, text="Save Basket", command=basketList.saveBasket)
+# btn_save_basket.pack(pady=10, padx=120, anchor="w")
+btn_draw_graph = ctk.CTkButton(right_frame, text="Draw Graph", command = lambda: graphMath.drawGraph(ax, canvas))
+btn_draw_graph.pack(pady=10, padx=120, anchor="w")
 
 def onMouseMove(event):
     if event.inaxes == ax:
