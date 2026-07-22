@@ -41,6 +41,9 @@ ax.set_xlim(24000, 25000)
 ax.set_ylim(-10000, 10000)
 
 v_line = ax.axvline(x=0, color='gray', linestyle='--', alpha=0.7, visible=False)
+h_line = ax.axhline(y=0, color='grey', linestyle='-', alpha=0.7)
+h_line.set_ydata([0, 0])
+h_line.set_visible(True)
 
 coordinates_label = ctk.CTkLabel(right_frame, text="Hover over graph to see coordinates", font=("Arial", 12))
 coordinates_label.pack(pady=10, padx=120, anchor="w")
@@ -50,23 +53,6 @@ fig.subplots_adjust(top=0.95)
 canvas = FigureCanvasTkAgg(fig, master=right_frame)
 canvas_widget = canvas.get_tk_widget()
 canvas_widget.pack(side=ctk.TOP, fill=ctk.BOTH, expand=True)
-
-# def plot_point():
-#     error_label.configure(text="")
-
-#     try:
-#         x_coord = float(entry_x.get())
-#         y_coord = float(entry_y.get())
-
-# def makeTable():
-#     data = makeTableData.getData()
-#     if not data:
-#         return
-
-#     table = makeTableData.create_table(left_frame, data)
-#     table.pack(expand=True, fill="both", padx=10, pady=10)
-
-# makeTable()
 
 data = makeTableData.getData()
 
