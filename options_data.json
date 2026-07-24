@@ -1,1115 +1,413 @@
 {
-    "index_name": "NIFTY_IMAGINARY",
-    "timestamp": "2026-07-15T18:33:37.987071",
-    "spot_price": 24350.0,
-    "expiry_date": "2026-07-18",
-    "days_to_expiry": 3,
+    "index_name": "SIMPLE_NIFTY",
+    "timestamp": "2026-07-24T12:00:00",
+    "spot_price": 120.0,
+    "expiry_date": "2026-07-30",
+    "days_to_expiry": 6,
     "options_chain": [
         {
-            "strike_price": 23350.0,
+            "strike_price": 50.0,
             "CE": {
-                "ltp": 1016.58,
-                "iv": 22.36,
-                "greeks": {
-                    "delta": 0.9825,
-                    "gamma": 8.8e-05,
-                    "theta": -7.96,
-                    "vega": 0.96
-                },
-                "open_interest": 3812,
-                "volume": 39504
-            },
-            "PE": {
-                "ltp": 3.15,
-                "iv": 22.36,
-                "greeks": {
-                    "delta": -0.0175,
-                    "gamma": 8.8e-05,
-                    "theta": -3.48,
-                    "vega": 0.96
-                },
-                "open_interest": 2498,
-                "volume": 29310
-            }
-        },
-        {
-            "strike_price": 23400.0,
-            "CE": {
-                "ltp": 10,
-                "iv": 21.29,
-                "greeks": {
-                    "delta": 0.9822,
-                    "gamma": 9.3e-05,
-                    "theta": -7.84,
-                    "vega": 0.97
-                },
-                "open_interest": 5955,
-                "volume": 26801
-            },
-            "PE": {
-                "ltp": 3.05,
-                "iv": 21.29,
-                "greeks": {
-                    "delta": -0.0178,
-                    "gamma": 9.3e-05,
-                    "theta": -3.35,
-                    "vega": 0.97
-                },
-                "open_interest": 9041,
-                "volume": 36193
-            }
-        },
-        {
-            "strike_price": 23450.0,
-            "CE": {
-                "ltp": 916.76,
-                "iv": 20.54,
-                "greeks": {
-                    "delta": 0.9804,
-                    "gamma": 0.000105,
-                    "theta": -7.99,
-                    "vega": 1.05
-                },
-                "open_interest": 3200,
-                "volume": 22536
-            },
-            "PE": {
-                "ltp": 3.27,
-                "iv": 20.54,
-                "greeks": {
-                    "delta": -0.0196,
-                    "gamma": 0.000105,
-                    "theta": -3.5,
-                    "vega": 1.05
-                },
-                "open_interest": 5502,
-                "volume": 16827
-            }
-        },
-        {
-            "strike_price": 23500.0,
-            "CE": {
-                "ltp": 867.29,
+                "ltp": 70.0,
                 "iv": 20.0,
                 "greeks": {
-                    "delta": 0.9773,
-                    "gamma": 0.000122,
-                    "theta": -8.37,
-                    "vega": 1.19
+                    "delta": 0.5,
+                    "gamma": 0.0,
+                    "theta": 0,
+                    "vega": 0
                 },
-                "open_interest": 171741,
-                "volume": 982921
+                "open_interest": 1000,
+                "volume": 1000
             },
             "PE": {
-                "ltp": 3.77,
+                "ltp": 0.0,
                 "iv": 20.0,
                 "greeks": {
-                    "delta": -0.0227,
-                    "gamma": 0.000122,
-                    "theta": -3.87,
-                    "vega": 1.19
+                    "delta": -0.5,
+                    "gamma": 0.0,
+                    "theta": 0,
+                    "vega": 0
                 },
-                "open_interest": 148181,
-                "volume": 869192
+                "open_interest": 1000,
+                "volume": 1000
             }
         },
         {
-            "strike_price": 23550.0,
+            "strike_price": 60.0,
             "CE": {
-                "ltp": 819.37,
-                "iv": 20.45,
+                "ltp": 60.0,
+                "iv": 20.0,
                 "greeks": {
-                    "delta": 0.9673,
-                    "gamma": 0.000162,
-                    "theta": -9.86,
-                    "vega": 1.61
+                    "delta": 0.5,
+                    "gamma": 0.0,
+                    "theta": 0,
+                    "vega": 0
                 },
-                "open_interest": 6214,
-                "volume": 28461
+                "open_interest": 1000,
+                "volume": 1000
             },
             "PE": {
-                "ltp": 5.83,
-                "iv": 20.45,
+                "ltp": 0.0,
+                "iv": 20.0,
                 "greeks": {
-                    "delta": -0.0327,
-                    "gamma": 0.000162,
-                    "theta": -5.35,
-                    "vega": 1.61
+                    "delta": -0.5,
+                    "gamma": 0.0,
+                    "theta": 0,
+                    "vega": 0
                 },
-                "open_interest": 8845,
-                "volume": 27682
+                "open_interest": 1000,
+                "volume": 1000
             }
         },
         {
-            "strike_price": 23600.0,
+            "strike_price": 70.0,
             "CE": {
-                "ltp": 770.26,
-                "iv": 19.88,
+                "ltp": 50.0,
+                "iv": 20.0,
                 "greeks": {
-                    "delta": 0.9622,
-                    "gamma": 0.000188,
-                    "theta": -10.37,
-                    "vega": 1.82
+                    "delta": 0.5,
+                    "gamma": 0.0,
+                    "theta": 0,
+                    "vega": 0
                 },
-                "open_interest": 4707,
-                "volume": 21717
+                "open_interest": 1000,
+                "volume": 1000
             },
             "PE": {
-                "ltp": 6.69,
-                "iv": 19.88,
+                "ltp": 0.0,
+                "iv": 20.0,
                 "greeks": {
-                    "delta": -0.0378,
-                    "gamma": 0.000188,
-                    "theta": -5.84,
-                    "vega": 1.82
+                    "delta": -0.5,
+                    "gamma": 0.0,
+                    "theta": 0,
+                    "vega": 0
                 },
-                "open_interest": 9381,
-                "volume": 39023
+                "open_interest": 1000,
+                "volume": 1000
             }
         },
         {
-            "strike_price": 23650.0,
+            "strike_price": 80.0,
             "CE": {
-                "ltp": 720.53,
-                "iv": 18.92,
+                "ltp": 42.0,
+                "iv": 20.0,
                 "greeks": {
-                    "delta": 0.9593,
-                    "gamma": 0.000209,
-                    "theta": -10.43,
-                    "vega": 1.93
+                    "delta": 0.5,
+                    "gamma": 0.0,
+                    "theta": 0,
+                    "vega": 0
                 },
-                "open_interest": 6144,
-                "volume": 21100
+                "open_interest": 1000,
+                "volume": 1000
             },
             "PE": {
-                "ltp": 6.93,
-                "iv": 18.92,
+                "ltp": 2.0,
+                "iv": 20.0,
                 "greeks": {
-                    "delta": -0.0407,
-                    "gamma": 0.000209,
-                    "theta": -5.9,
-                    "vega": 1.93
+                    "delta": -0.5,
+                    "gamma": 0.0,
+                    "theta": 0,
+                    "vega": 0
                 },
-                "open_interest": 4398,
-                "volume": 36632
+                "open_interest": 1000,
+                "volume": 1000
             }
         },
         {
-            "strike_price": 23700.0,
+            "strike_price": 90.0,
             "CE": {
-                "ltp": 671.22,
-                "iv": 18.14,
+                "ltp": 34.0,
+                "iv": 20.0,
                 "greeks": {
-                    "delta": 0.9543,
-                    "gamma": 0.00024,
-                    "theta": -10.73,
-                    "vega": 2.12
+                    "delta": 0.5,
+                    "gamma": 0.0,
+                    "theta": 0,
+                    "vega": 0
                 },
-                "open_interest": 8467,
-                "volume": 28448
+                "open_interest": 1000,
+                "volume": 1000
             },
             "PE": {
-                "ltp": 7.59,
-                "iv": 18.14,
+                "ltp": 4.0,
+                "iv": 20.0,
                 "greeks": {
-                    "delta": -0.0457,
-                    "gamma": 0.00024,
-                    "theta": -6.19,
-                    "vega": 2.12
+                    "delta": -0.5,
+                    "gamma": 0.0,
+                    "theta": 0,
+                    "vega": 0
                 },
-                "open_interest": 9244,
-                "volume": 24359
+                "open_interest": 1000,
+                "volume": 1000
             }
         },
         {
-            "strike_price": 23750.0,
+            "strike_price": 100.0,
             "CE": {
-                "ltp": 623.24,
-                "iv": 17.87,
+                "ltp": 26.0,
+                "iv": 20.0,
                 "greeks": {
-                    "delta": 0.9434,
-                    "gamma": 0.000288,
-                    "theta": -11.76,
-                    "vega": 2.51
+                    "delta": 0.5,
+                    "gamma": 0.0,
+                    "theta": 0,
+                    "vega": 0
                 },
-                "open_interest": 2352,
-                "volume": 38779
+                "open_interest": 1000,
+                "volume": 1000
             },
             "PE": {
-                "ltp": 9.58,
-                "iv": 17.87,
+                "ltp": 6.0,
+                "iv": 20.0,
                 "greeks": {
-                    "delta": -0.0566,
-                    "gamma": 0.000288,
-                    "theta": -7.21,
-                    "vega": 2.51
+                    "delta": -0.5,
+                    "gamma": 0.0,
+                    "theta": 0,
+                    "vega": 0
                 },
-                "open_interest": 5922,
-                "volume": 36911
+                "open_interest": 1000,
+                "volume": 1000
             }
         },
         {
-            "strike_price": 23800.0,
+            "strike_price": 110.0,
             "CE": {
-                "ltp": 575.35,
-                "iv": 17.45,
+                "ltp": 18.0,
+                "iv": 20.0,
                 "greeks": {
-                    "delta": 0.9317,
-                    "gamma": 0.000342,
-                    "theta": -12.7,
-                    "vega": 2.91
+                    "delta": 0.5,
+                    "gamma": 0.0,
+                    "theta": 0,
+                    "vega": 0
                 },
-                "open_interest": 2436,
-                "volume": 18887
+                "open_interest": 1000,
+                "volume": 1000
             },
             "PE": {
-                "ltp": 11.66,
-                "iv": 17.45,
+                "ltp": 8.0,
+                "iv": 20.0,
                 "greeks": {
-                    "delta": -0.0683,
-                    "gamma": 0.000342,
-                    "theta": -8.14,
-                    "vega": 2.91
+                    "delta": -0.5,
+                    "gamma": 0.0,
+                    "theta": 0,
+                    "vega": 0
                 },
-                "open_interest": 9819,
-                "volume": 30297
+                "open_interest": 1000,
+                "volume": 1000
             }
         },
         {
-            "strike_price": 23850.0,
+            "strike_price": 120.0,
             "CE": {
-                "ltp": 526.48,
-                "iv": 16.59,
+                "ltp": 10.0,
+                "iv": 20.0,
                 "greeks": {
-                    "delta": 0.923,
-                    "gamma": 0.000394,
-                    "theta": -13.02,
-                    "vega": 3.19
+                    "delta": 0.5,
+                    "gamma": 0.0,
+                    "theta": 0,
+                    "vega": 0
                 },
-                "open_interest": 3158,
-                "volume": 31182
+                "open_interest": 1000,
+                "volume": 1000
             },
             "PE": {
-                "ltp": 12.76,
-                "iv": 16.59,
+                "ltp": 10.0,
+                "iv": 20.0,
                 "greeks": {
-                    "delta": -0.077,
-                    "gamma": 0.000394,
-                    "theta": -8.45,
-                    "vega": 3.19
+                    "delta": -0.5,
+                    "gamma": 0.0,
+                    "theta": 0,
+                    "vega": 0
                 },
-                "open_interest": 6911,
-                "volume": 30487
+                "open_interest": 1000,
+                "volume": 1000
             }
         },
         {
-            "strike_price": 23900.0,
+            "strike_price": 130.0,
             "CE": {
-                "ltp": 481.68,
-                "iv": 16.76,
+                "ltp": 8.0,
+                "iv": 20.0,
                 "greeks": {
-                    "delta": 0.8986,
-                    "gamma": 0.000479,
-                    "theta": -15.04,
-                    "vega": 3.92
+                    "delta": 0.5,
+                    "gamma": 0.0,
+                    "theta": 0,
+                    "vega": 0
                 },
-                "open_interest": 6046,
-                "volume": 22131
+                "open_interest": 1000,
+                "volume": 1000
             },
             "PE": {
-                "ltp": 17.93,
-                "iv": 16.76,
+                "ltp": 18.0,
+                "iv": 20.0,
                 "greeks": {
-                    "delta": -0.1014,
-                    "gamma": 0.000479,
-                    "theta": -10.46,
-                    "vega": 3.92
+                    "delta": -0.5,
+                    "gamma": 0.0,
+                    "theta": 0,
+                    "vega": 0
                 },
-                "open_interest": 2442,
-                "volume": 12368
+                "open_interest": 1000,
+                "volume": 1000
             }
         },
         {
-            "strike_price": 23950.0,
+            "strike_price": 140.0,
             "CE": {
-                "ltp": 436.09,
-                "iv": 16.43,
+                "ltp": 6.0,
+                "iv": 20.0,
                 "greeks": {
-                    "delta": 0.8765,
-                    "gamma": 0.000563,
-                    "theta": -16.35,
-                    "vega": 4.51
+                    "delta": 0.5,
+                    "gamma": 0.0,
+                    "theta": 0,
+                    "vega": 0
                 },
-                "open_interest": 5741,
-                "volume": 30750
+                "open_interest": 1000,
+                "volume": 1000
             },
             "PE": {
-                "ltp": 22.32,
-                "iv": 16.43,
+                "ltp": 26.0,
+                "iv": 20.0,
                 "greeks": {
-                    "delta": -0.1235,
-                    "gamma": 0.000563,
-                    "theta": -11.76,
-                    "vega": 4.51
+                    "delta": -0.5,
+                    "gamma": 0.0,
+                    "theta": 0,
+                    "vega": 0
                 },
-                "open_interest": 5222,
-                "volume": 12553
+                "open_interest": 1000,
+                "volume": 1000
             }
         },
         {
-            "strike_price": 24000.0,
+            "strike_price": 150.0,
             "CE": {
-                "ltp": 387.44,
-                "iv": 15.29,
+                "ltp": 4.0,
+                "iv": 20.0,
                 "greeks": {
-                    "delta": 0.8628,
-                    "gamma": 0.00065,
-                    "theta": -16.31,
-                    "vega": 4.85
+                    "delta": 0.5,
+                    "gamma": 0.0,
+                    "theta": 0,
+                    "vega": 0
                 },
-                "open_interest": 58912,
-                "volume": 476089
+                "open_interest": 1000,
+                "volume": 1000
             },
             "PE": {
-                "ltp": 23.64,
-                "iv": 15.29,
+                "ltp": 34.0,
+                "iv": 20.0,
                 "greeks": {
-                    "delta": -0.1372,
-                    "gamma": 0.00065,
-                    "theta": -11.71,
-                    "vega": 4.85
+                    "delta": -0.5,
+                    "gamma": 0.0,
+                    "theta": 0,
+                    "vega": 0
                 },
-                "open_interest": 233825,
-                "volume": 447751
+                "open_interest": 1000,
+                "volume": 1000
             }
         },
         {
-            "strike_price": 24050.0,
+            "strike_price": 160.0,
             "CE": {
-                "ltp": 344.31,
-                "iv": 15.1,
+                "ltp": 2.0,
+                "iv": 20.0,
                 "greeks": {
-                    "delta": 0.83,
-                    "gamma": 0.000759,
-                    "theta": -17.87,
-                    "vega": 5.59
+                    "delta": 0.5,
+                    "gamma": 0.0,
+                    "theta": 0,
+                    "vega": 0
                 },
-                "open_interest": 5395,
-                "volume": 10038
+                "open_interest": 1000,
+                "volume": 1000
             },
             "PE": {
-                "ltp": 30.48,
-                "iv": 15.1,
+                "ltp": 42.0,
+                "iv": 20.0,
                 "greeks": {
-                    "delta": -0.17,
-                    "gamma": 0.000759,
-                    "theta": -13.26,
-                    "vega": 5.59
+                    "delta": -0.5,
+                    "gamma": 0.0,
+                    "theta": 0,
+                    "vega": 0
                 },
-                "open_interest": 7365,
-                "volume": 26683
+                "open_interest": 1000,
+                "volume": 1000
             }
         },
         {
-            "strike_price": 24100.0,
+            "strike_price": 170.0,
             "CE": {
-                "ltp": 299.16,
-                "iv": 14.33,
+                "ltp": 0.0,
+                "iv": 20.0,
                 "greeks": {
-                    "delta": 0.801,
-                    "gamma": 0.000882,
-                    "theta": -18.4,
-                    "vega": 6.16
+                    "delta": 0.5,
+                    "gamma": 0.0,
+                    "theta": 0,
+                    "vega": 0
                 },
-                "open_interest": 13352,
-                "volume": 107899
+                "open_interest": 1000,
+                "volume": 1000
             },
             "PE": {
-                "ltp": 35.3,
-                "iv": 14.33,
+                "ltp": 50.0,
+                "iv": 20.0,
                 "greeks": {
-                    "delta": -0.199,
-                    "gamma": 0.000882,
-                    "theta": -13.78,
-                    "vega": 6.16
+                    "delta": -0.5,
+                    "gamma": 0.0,
+                    "theta": 0,
+                    "vega": 0
                 },
-                "open_interest": 44175,
-                "volume": 57995
+                "open_interest": 1000,
+                "volume": 1000
             }
         },
         {
-            "strike_price": 24150.0,
+            "strike_price": 180.0,
             "CE": {
-                "ltp": 259.44,
-                "iv": 14.18,
+                "ltp": 0.0,
+                "iv": 20.0,
                 "greeks": {
-                    "delta": 0.7558,
-                    "gamma": 0.001003,
-                    "theta": -19.85,
-                    "vega": 6.93
+                    "delta": 0.5,
+                    "gamma": 0.0,
+                    "theta": 0,
+                    "vega": 0
                 },
-                "open_interest": 26303,
-                "volume": 59608
+                "open_interest": 1000,
+                "volume": 1000
             },
             "PE": {
-                "ltp": 45.55,
-                "iv": 14.18,
+                "ltp": 60.0,
+                "iv": 20.0,
                 "greeks": {
-                    "delta": -0.2442,
-                    "gamma": 0.001003,
-                    "theta": -15.22,
-                    "vega": 6.93
+                    "delta": -0.5,
+                    "gamma": 0.0,
+                    "theta": 0,
+                    "vega": 0
                 },
-                "open_interest": 21368,
-                "volume": 141444
+                "open_interest": 1000,
+                "volume": 1000
             }
         },
         {
-            "strike_price": 24200.0,
+            "strike_price": 190.0,
             "CE": {
-                "ltp": 219.01,
-                "iv": 13.63,
+                "ltp": 0.0,
+                "iv": 20.0,
                 "greeks": {
-                    "delta": 0.7098,
-                    "gamma": 0.001138,
-                    "theta": -20.44,
-                    "vega": 7.56
+                    "delta": 0.5,
+                    "gamma": 0.0,
+                    "theta": 0,
+                    "vega": 0
                 },
-                "open_interest": 17683,
-                "volume": 85509
+                "open_interest": 1000,
+                "volume": 1000
             },
             "PE": {
-                "ltp": 55.09,
-                "iv": 13.63,
+                "ltp": 70.0,
+                "iv": 20.0,
                 "greeks": {
-                    "delta": -0.2902,
-                    "gamma": 0.001138,
-                    "theta": -15.8,
-                    "vega": 7.56
+                    "delta": -0.5,
+                    "gamma": 0.0,
+                    "theta": 0,
+                    "vega": 0
                 },
-                "open_interest": 15403,
-                "volume": 139391
-            }
-        },
-        {
-            "strike_price": 24250.0,
-            "CE": {
-                "ltp": 178.93,
-                "iv": 12.85,
-                "greeks": {
-                    "delta": 0.6585,
-                    "gamma": 0.001294,
-                    "theta": -20.4,
-                    "vega": 8.1
-                },
-                "open_interest": 19227,
-                "volume": 168986
-            },
-            "PE": {
-                "ltp": 64.98,
-                "iv": 12.85,
-                "greeks": {
-                    "delta": -0.3415,
-                    "gamma": 0.001294,
-                    "theta": -15.75,
-                    "vega": 8.1
-                },
-                "open_interest": 19462,
-                "volume": 156298
-            }
-        },
-        {
-            "strike_price": 24300.0,
-            "CE": {
-                "ltp": 143.68,
-                "iv": 12.36,
-                "greeks": {
-                    "delta": 0.595,
-                    "gamma": 0.00142,
-                    "theta": -20.38,
-                    "vega": 8.56
-                },
-                "open_interest": 30428,
-                "volume": 114546
-            },
-            "PE": {
-                "ltp": 79.71,
-                "iv": 12.36,
-                "greeks": {
-                    "delta": -0.405,
-                    "gamma": 0.00142,
-                    "theta": -15.72,
-                    "vega": 8.56
-                },
-                "open_interest": 31846,
-                "volume": 198064
-            }
-        },
-        {
-            "strike_price": 24350.0,
-            "CE": {
-                "ltp": 112.68,
-                "iv": 11.99,
-                "greeks": {
-                    "delta": 0.5233,
-                    "gamma": 0.001505,
-                    "theta": -19.99,
-                    "vega": 8.79
-                },
-                "open_interest": 11804,
-                "volume": 113737
-            },
-            "PE": {
-                "ltp": 98.68,
-                "iv": 11.99,
-                "greeks": {
-                    "delta": -0.4767,
-                    "gamma": 0.001505,
-                    "theta": -15.32,
-                    "vega": 8.79
-                },
-                "open_interest": 15297,
-                "volume": 87534
-            }
-        },
-        {
-            "strike_price": 24400.0,
-            "CE": {
-                "ltp": 97.02,
-                "iv": 12.95,
-                "greeks": {
-                    "delta": 0.4523,
-                    "gamma": 0.001386,
-                    "theta": -20.96,
-                    "vega": 8.74
-                },
-                "open_interest": 24962,
-                "volume": 166910
-            },
-            "PE": {
-                "ltp": 132.98,
-                "iv": 12.95,
-                "greeks": {
-                    "delta": -0.5477,
-                    "gamma": 0.001386,
-                    "theta": -16.28,
-                    "vega": 8.74
-                },
-                "open_interest": 26424,
-                "volume": 139413
-            }
-        },
-        {
-            "strike_price": 24450.0,
-            "CE": {
-                "ltp": 75.37,
-                "iv": 12.83,
-                "greeks": {
-                    "delta": 0.3832,
-                    "gamma": 0.001348,
-                    "theta": -19.79,
-                    "vega": 8.43
-                },
-                "open_interest": 33671,
-                "volume": 125659
-            },
-            "PE": {
-                "ltp": 161.31,
-                "iv": 12.83,
-                "greeks": {
-                    "delta": -0.6168,
-                    "gamma": 0.001348,
-                    "theta": -15.11,
-                    "vega": 8.43
-                },
-                "open_interest": 49353,
-                "volume": 157187
-            }
-        },
-        {
-            "strike_price": 24500.0,
-            "CE": {
-                "ltp": 62.59,
-                "iv": 13.4,
-                "greeks": {
-                    "delta": 0.3256,
-                    "gamma": 0.001218,
-                    "theta": -19.27,
-                    "vega": 7.95
-                },
-                "open_interest": 220216,
-                "volume": 560887
-            },
-            "PE": {
-                "ltp": 198.5,
-                "iv": 13.4,
-                "greeks": {
-                    "delta": -0.6744,
-                    "gamma": 0.001218,
-                    "theta": -14.57,
-                    "vega": 7.95
-                },
-                "open_interest": 51167,
-                "volume": 307806
-            }
-        },
-        {
-            "strike_price": 24550.0,
-            "CE": {
-                "ltp": 53.14,
-                "iv": 14.1,
-                "greeks": {
-                    "delta": 0.2781,
-                    "gamma": 0.001078,
-                    "theta": -18.69,
-                    "vega": 7.41
-                },
-                "open_interest": 33620,
-                "volume": 54716
-            },
-            "PE": {
-                "ltp": 239.02,
-                "iv": 14.1,
-                "greeks": {
-                    "delta": -0.7219,
-                    "gamma": 0.001078,
-                    "theta": -13.99,
-                    "vega": 7.41
-                },
-                "open_interest": 45189,
-                "volume": 145526
-            }
-        },
-        {
-            "strike_price": 24600.0,
-            "CE": {
-                "ltp": 43.38,
-                "iv": 14.49,
-                "greeks": {
-                    "delta": 0.2336,
-                    "gamma": 0.000957,
-                    "theta": -17.42,
-                    "vega": 6.76
-                },
-                "open_interest": 17128,
-                "volume": 182555
-            },
-            "PE": {
-                "ltp": 279.23,
-                "iv": 14.49,
-                "greeks": {
-                    "delta": -0.7664,
-                    "gamma": 0.000957,
-                    "theta": -12.7,
-                    "vega": 6.76
-                },
-                "open_interest": 21206,
-                "volume": 126360
-            }
-        },
-        {
-            "strike_price": 24650.0,
-            "CE": {
-                "ltp": 33.25,
-                "iv": 14.53,
-                "greeks": {
-                    "delta": 0.1896,
-                    "gamma": 0.000845,
-                    "theta": -15.37,
-                    "vega": 5.98
-                },
-                "open_interest": 2423,
-                "volume": 38825
-            },
-            "PE": {
-                "ltp": 319.08,
-                "iv": 14.53,
-                "greeks": {
-                    "delta": -0.8104,
-                    "gamma": 0.000845,
-                    "theta": -10.65,
-                    "vega": 5.98
-                },
-                "open_interest": 8643,
-                "volume": 29803
-            }
-        },
-        {
-            "strike_price": 24700.0,
-            "CE": {
-                "ltp": 27.59,
-                "iv": 15.04,
-                "greeks": {
-                    "delta": 0.1592,
-                    "gamma": 0.000731,
-                    "theta": -14.15,
-                    "vega": 5.35
-                },
-                "open_interest": 8866,
-                "volume": 27488
-            },
-            "PE": {
-                "ltp": 363.38,
-                "iv": 15.04,
-                "greeks": {
-                    "delta": -0.8408,
-                    "gamma": 0.000731,
-                    "theta": -9.42,
-                    "vega": 5.35
-                },
-                "open_interest": 9368,
-                "volume": 12004
-            }
-        },
-        {
-            "strike_price": 24750.0,
-            "CE": {
-                "ltp": 26.69,
-                "iv": 16.29,
-                "greeks": {
-                    "delta": 0.1453,
-                    "gamma": 0.000635,
-                    "theta": -14.36,
-                    "vega": 5.04
-                },
-                "open_interest": 9745,
-                "volume": 12228
-            },
-            "PE": {
-                "ltp": 412.45,
-                "iv": 16.29,
-                "greeks": {
-                    "delta": -0.8547,
-                    "gamma": 0.000635,
-                    "theta": -9.61,
-                    "vega": 5.04
-                },
-                "open_interest": 9820,
-                "volume": 15930
-            }
-        },
-        {
-            "strike_price": 24800.0,
-            "CE": {
-                "ltp": 20.59,
-                "iv": 16.35,
-                "greeks": {
-                    "delta": 0.1172,
-                    "gamma": 0.000545,
-                    "theta": -12.38,
-                    "vega": 4.34
-                },
-                "open_interest": 7279,
-                "volume": 33572
-            },
-            "PE": {
-                "ltp": 456.32,
-                "iv": 16.35,
-                "greeks": {
-                    "delta": -0.8828,
-                    "gamma": 0.000545,
-                    "theta": -7.63,
-                    "vega": 4.34
-                },
-                "open_interest": 5196,
-                "volume": 36365
-            }
-        },
-        {
-            "strike_price": 24850.0,
-            "CE": {
-                "ltp": 19.37,
-                "iv": 17.36,
-                "greeks": {
-                    "delta": 0.1061,
-                    "gamma": 0.000478,
-                    "theta": -12.2,
-                    "vega": 4.05
-                },
-                "open_interest": 8470,
-                "volume": 23474
-            },
-            "PE": {
-                "ltp": 505.07,
-                "iv": 17.36,
-                "greeks": {
-                    "delta": -0.8939,
-                    "gamma": 0.000478,
-                    "theta": -7.43,
-                    "vega": 4.05
-                },
-                "open_interest": 8576,
-                "volume": 13264
-            }
-        },
-        {
-            "strike_price": 24900.0,
-            "CE": {
-                "ltp": 16.08,
-                "iv": 17.74,
-                "greeks": {
-                    "delta": 0.0893,
-                    "gamma": 0.000412,
-                    "theta": -10.95,
-                    "vega": 3.56
-                },
-                "open_interest": 6570,
-                "volume": 34252
-            },
-            "PE": {
-                "ltp": 551.76,
-                "iv": 17.74,
-                "greeks": {
-                    "delta": -0.9107,
-                    "gamma": 0.000412,
-                    "theta": -6.18,
-                    "vega": 3.56
-                },
-                "open_interest": 4184,
-                "volume": 15118
-            }
-        },
-        {
-            "strike_price": 24950.0,
-            "CE": {
-                "ltp": 11.92,
-                "iv": 17.64,
-                "greeks": {
-                    "delta": 0.0697,
-                    "gamma": 0.000344,
-                    "theta": -9.01,
-                    "vega": 2.95
-                },
-                "open_interest": 3197,
-                "volume": 20607
-            },
-            "PE": {
-                "ltp": 597.57,
-                "iv": 17.64,
-                "greeks": {
-                    "delta": -0.9303,
-                    "gamma": 0.000344,
-                    "theta": -4.23,
-                    "vega": 2.95
-                },
-                "open_interest": 4016,
-                "volume": 16648
-            }
-        },
-        {
-            "strike_price": 25000.0,
-            "CE": {
-                "ltp": 10.08,
-                "iv": 18.1,
-                "greeks": {
-                    "delta": 0.0591,
-                    "gamma": 0.000295,
-                    "theta": -8.11,
-                    "vega": 2.6
-                },
-                "open_interest": 147277,
-                "volume": 697716
-            },
-            "PE": {
-                "ltp": 645.7,
-                "iv": 18.1,
-                "greeks": {
-                    "delta": -0.9409,
-                    "gamma": 0.000295,
-                    "theta": -3.32,
-                    "vega": 2.6
-                },
-                "open_interest": 162588,
-                "volume": 320839
-            }
-        },
-        {
-            "strike_price": 25050.0,
-            "CE": {
-                "ltp": 8.48,
-                "iv": 18.52,
-                "greeks": {
-                    "delta": 0.05,
-                    "gamma": 0.000252,
-                    "theta": -7.25,
-                    "vega": 2.28
-                },
-                "open_interest": 8866,
-                "volume": 38482
-            },
-            "PE": {
-                "ltp": 694.07,
-                "iv": 18.52,
-                "greeks": {
-                    "delta": -0.95,
-                    "gamma": 0.000252,
-                    "theta": -2.45,
-                    "vega": 2.28
-                },
-                "open_interest": 5722,
-                "volume": 23013
-            }
-        },
-        {
-            "strike_price": 25100.0,
-            "CE": {
-                "ltp": 8.41,
-                "iv": 19.54,
-                "greeks": {
-                    "delta": 0.0474,
-                    "gamma": 0.000229,
-                    "theta": -7.32,
-                    "vega": 2.18
-                },
-                "open_interest": 2307,
-                "volume": 37045
-            },
-            "PE": {
-                "ltp": 743.97,
-                "iv": 19.54,
-                "greeks": {
-                    "delta": -0.9526,
-                    "gamma": 0.000229,
-                    "theta": -2.51,
-                    "vega": 2.18
-                },
-                "open_interest": 2861,
-                "volume": 32306
-            }
-        },
-        {
-            "strike_price": 25150.0,
-            "CE": {
-                "ltp": 7.82,
-                "iv": 20.29,
-                "greeks": {
-                    "delta": 0.043,
-                    "gamma": 0.000204,
-                    "theta": -7.03,
-                    "vega": 2.02
-                },
-                "open_interest": 5733,
-                "volume": 18148
-            },
-            "PE": {
-                "ltp": 793.35,
-                "iv": 20.29,
-                "greeks": {
-                    "delta": -0.957,
-                    "gamma": 0.000204,
-                    "theta": -2.21,
-                    "vega": 2.02
-                },
-                "open_interest": 4498,
-                "volume": 31273
-            }
-        },
-        {
-            "strike_price": 25200.0,
-            "CE": {
-                "ltp": 5.65,
-                "iv": 20.1,
-                "greeks": {
-                    "delta": 0.0327,
-                    "gamma": 0.000165,
-                    "theta": -5.56,
-                    "vega": 1.61
-                },
-                "open_interest": 8712,
-                "volume": 22373
-            },
-            "PE": {
-                "ltp": 841.16,
-                "iv": 20.1,
-                "greeks": {
-                    "delta": -0.9673,
-                    "gamma": 0.000165,
-                    "theta": -0.73,
-                    "vega": 1.61
-                },
-                "open_interest": 6408,
-                "volume": 32728
-            }
-        },
-        {
-            "strike_price": 25250.0,
-            "CE": {
-                "ltp": 5.8,
-                "iv": 21.16,
-                "greeks": {
-                    "delta": 0.032,
-                    "gamma": 0.000154,
-                    "theta": -5.74,
-                    "vega": 1.58
-                },
-                "open_interest": 9419,
-                "volume": 31718
-            },
-            "PE": {
-                "ltp": 891.28,
-                "iv": 21.16,
-                "greeks": {
-                    "delta": -0.968,
-                    "gamma": 0.000154,
-                    "theta": -0.9,
-                    "vega": 1.58
-                },
-                "open_interest": 4555,
-                "volume": 30221
-            }
-        },
-        {
-            "strike_price": 25300.0,
-            "CE": {
-                "ltp": 4.52,
-                "iv": 21.22,
-                "greeks": {
-                    "delta": 0.0256,
-                    "gamma": 0.000127,
-                    "theta": -4.77,
-                    "vega": 1.32
-                },
-                "open_interest": 8250,
-                "volume": 32184
-            },
-            "PE": {
-                "ltp": 939.96,
-                "iv": 21.22,
-                "greeks": {
-                    "delta": -0.9744,
-                    "gamma": 0.000127,
-                    "theta": 0.07,
-                    "vega": 1.32
-                },
-                "open_interest": 5793,
-                "volume": 10511
-            }
-        },
-        {
-            "strike_price": 25350.0,
-            "CE": {
-                "ltp": 3.77,
-                "iv": 21.53,
-                "greeks": {
-                    "delta": 0.0215,
-                    "gamma": 0.000108,
-                    "theta": -4.18,
-                    "vega": 1.14
-                },
-                "open_interest": 7032,
-                "volume": 26827
-            },
-            "PE": {
-                "ltp": 989.19,
-                "iv": 21.53,
-                "greeks": {
-                    "delta": -0.9785,
-                    "gamma": 0.000108,
-                    "theta": 0.67,
-                    "vega": 1.14
-                },
-                "open_interest": 8360,
-                "volume": 39604
+                "open_interest": 1000,
+                "volume": 1000
             }
         }
     ]

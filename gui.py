@@ -38,8 +38,8 @@ ax.spines['right'].set_visible(False)
 ax.spines['bottom'].set_color('gray')
 ax.spines['left'].set_color('gray')
 
-ax.set_xlim(23350, 25350)
-ax.set_ylim(-10000, 10000)
+ax.set_xlim(40, 200)
+ax.set_ylim(-150, 150)
 
 v_line = ax.axvline(x=0, color='gray', linestyle='--', alpha=0.7, visible=False)
 h_line = ax.axhline(y=0, color='grey', linestyle='-', alpha=0.7)
@@ -62,7 +62,7 @@ btn_buy_call, btn_sell_call, btn_buy_put, btn_sell_put = makeTableData.addButton
 
 table.pack(expand=True, fill="both", padx=10, pady=10)
 
-makeTableData.drawButtons(btn_buy_call, btn_sell_call, btn_buy_put, btn_sell_put, table, data)
+makeTableData.drawButtons(btn_buy_call, btn_sell_call, btn_buy_put, btn_sell_put, table, data, ax, canvas)
 
 btn_buy_call.bind("<Enter>", lambda e, row=1: makeTableData.on_button_enter(e, row, data, table))
 btn_sell_call.bind("<Enter>", lambda e, row=1: makeTableData.on_button_enter(e, row, data, table))
@@ -73,8 +73,8 @@ table.bind("<Leave>", lambda e: makeTableData.hideButtons(e, btn_buy_call, btn_s
 
 # btn_save_basket = ctk.CTkButton(right_frame, text="Save Basket", command=basketList.saveBasket)
 # btn_save_basket.pack(pady=10, padx=120, anchor="w")
-btn_draw_graph = ctk.CTkButton(right_frame, text="Draw Graph", command = lambda: graphMath.drawGraph(ax, canvas))
-btn_draw_graph.pack(pady=10, padx=120, anchor="w")
+# btn_draw_graph = ctk.CTkButton(right_frame, text="Draw Graph", command = lambda: graphMath.drawGraph(ax, canvas))
+# btn_draw_graph.pack(pady=10, padx=120, anchor="w")
 
 def onMouseMove(event):
     if event.inaxes == ax:

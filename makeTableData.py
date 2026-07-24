@@ -1,7 +1,9 @@
 import customtkinter as ctk
 from CTkTable import *
 import json
+
 import basketList
+import graphMath
 
 def getData():
     try:
@@ -56,15 +58,16 @@ def addButtons(master, row):
 
 basket = basketList.basket
 
-def buy_call_clicked(row, data):
+def buy_call_clicked(row, data, ax, canvas):
     basket.append(data[row] + ["BUY", "CALL"])
+    graphMath.drawGraph(ax, canvas)
     print(f"Added to basket: {data[row]} + ['BUY', 'CALL']")
 
-def sell_call_clicked(row, data):
+def sell_call_clicked(row, data, ax, canvas):
     basket.append(data[row] + ["SELL", "CALL"])
     print(f"Added to basket: {data[row]} + ['SELL', 'CALL']")
 
-def buy_put_clicked(row, data):
+def buy_put_clicked(row, data, ax, canvas):
     basket.append(data[row] + ["BUY", "PUT"])
     print(f"Added to basket: {data[row]} + ['BUY', 'PUT']")
 
@@ -72,28 +75,28 @@ def sell_put_clicked(row, data):
     basket.append(data[row] + ["SELL", "PUT"])
     print(f"Added to basket: {data[row]} + ['SELL', 'PUT']")
 
-def on_row_enter(e, row, data, btn_buy_call, btn_sell_call, btn_buy_put, btn_sell_put, table):
+def on_row_enter(e, row, data, btn_buy_call, btn_sell_call, btn_buy_put, btn_sell_put, table, ax, canvas):
     if getattr(on_row_enter, "last_row", None) == row:
         return
     
-    btn_buy_call.configure(command=lambda r=row: buy_call_clicked(r, data))
-    btn_sell_call.configure(command=lambda r=row: sell_call_clicked(r, data))
-    btn_buy_put.configure(command=lambda r=row: buy_put_clicked(r, data))
-    btn_sell_put.configure(command=lambda r=row: sell_put_clicked(r, data))
+    btn_buy_call.configure(command=lambda r=row: buy_call_clicked(r, data, ax, canvas))
+    btn_sell_call.configure(command=lambda r=row: sell_call_clicked(r, data, ax, canvas))
+    btn_buy_put.configure(command=lambda r=row: buy_put_clicked(r, data, ax, canvas))
+    btn_sell_put.configure(command=lambda r=row: sell_put_clicked(r, data, ax, canvas))
 
     btn_buy_call.place(in_=table.frame[row, 1], relx=0.0, rely=0.5, anchor="w")
     btn_buy_put.place(in_=table.frame[row, 2], relx=0.0, rely=0.5, anchor="e")
     btn_sell_call.place(in_=table.frame[row, 1], relx=0.0, rely=0.5, anchor="e")
     btn_sell_put.place(in_=table.frame[row, 1], relx=1.0, rely=0.5, anchor="w")
 
-def drawButtons(btn_buy_call, btn_sell_call, btn_buy_put, btn_sell_put, table, data):
+def drawButtons(btn_buy_call, btn_sell_call, btn_buy_put, btn_sell_put, table, data, ax, canvas):
     for r in range(1, table.rows):
         for c in range(table.columns):
             cell_frame = table.frame[r, c]
 
-            cell_frame.bind("<Enter>", lambda e, row=r: on_row_enter(e, row, data, btn_buy_call, btn_sell_call, btn_buy_put, btn_sell_put, table))
+            cell_frame.bind("<Enter>", lambda e, row=r: on_row_enter(e, row, data, btn_buy_call, btn_sell_call, btn_buy_put, btn_sell_put, table, ax, canvas))
             for widget in cell_frame.winfo_children():
-                widget.bind("<Enter>", lambda e, row=r: on_row_enter(e, row, data, btn_buy_call, btn_sell_call, btn_buy_put, btn_sell_put, table))
+                widget.bind("<Enter>", lambda e, row=r: on_row_enter(e, row, data, btn_buy_call, btn_sell_call, btn_buy_put, btn_sell_put, table, ax, canvas))
 
 def on_button_enter(e, row, data, table):
     if hasattr(on_button_enter, "last_row"):
