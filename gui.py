@@ -39,7 +39,7 @@ ax.spines['bottom'].set_color('gray')
 ax.spines['left'].set_color('gray')
 
 ax.set_xlim(40, 200)
-ax.set_ylim(-150, 150)
+ax.set_ylim(-250, 250)
 
 v_line = ax.axvline(x=0, color='gray', linestyle='--', alpha=0.7, visible=False)
 h_line = ax.axhline(y=0, color='grey', linestyle='-', alpha=0.7)

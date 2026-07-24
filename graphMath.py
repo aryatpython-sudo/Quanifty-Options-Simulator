@@ -23,21 +23,12 @@ def callsPuts():
         totalCost += float(basket[i][0])
 
         if basket[i][4] == "CALL":
-            if calls == []:
-                calls.append([basket[i][1], basket[i][3]])
-            else:
-                if float(basket[i][1]) < float(calls[0][0]):
-                    calls.insert(0, [basket[i][1], basket[i][3]])
-                else:
-                    calls.append([basket[i][1], basket[i][3]])
+            calls.append([basket[i][1], basket[i][3]])
         elif basket[i][4] == "PUT":
-            if puts == []:
-                puts.append([basket[i][1], basket[i][3]])
-            else:
-                if float(basket[i][1]) > float(puts[0][0]):
-                    puts.insert(0, [basket[i][1], basket[i][3]])
-                else:
-                    puts.append([basket[i][1], basket[i][3]])
+            puts.append([basket[i][1], basket[i][3]])
+
+    calls.sort(key=lambda item: float(item[0]))
+    puts.sort(key=lambda item: float(item[0]))
 
     return calls, puts, totalCost
 
